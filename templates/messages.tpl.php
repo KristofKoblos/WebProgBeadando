@@ -1,4 +1,4 @@
-<table>
+<table class="messages">
   <tr>
     <th>Név</th>
     <th>Telefon</th>

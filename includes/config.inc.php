@@ -19,5 +19,5 @@
     );
 
     $footer = array(
-        'text' => 'Mehely &copy; ' . date('Y')
+        'text' => 'Menhely &copy; ' . date('Y')
     );

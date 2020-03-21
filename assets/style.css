@@ -4,6 +4,11 @@
     --main-color: #ffffff;
     --main-bg-color: #2d2e2e;
 
+    /* LINK COLORS */
+
+    --hover-bg-color: #404040;
+    --active-bg-color: #545454;
+
     /* CONTENT COLORS */
 
     --content-bg-color: #ededed;
@@ -23,19 +28,78 @@ html, body {
 
 /* ========= MENU ========= */
 
-header nav {
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo-bar {
+    width: 100%;
+    padding: 20px 10vw;
+    background: var(--active-bg-color);
+    transition: all .5s;
+}
+
+#logo {
+    max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin: 0px auto;
+    transition: all .5s;
+}
+
+.scrolled-logo-bar {
+    padding: 10px 10vw;
+}
+
+.scrolled-logo-bar > #logo {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.menu {
     width: 100%;
     overflow: hidden;
     background: var(--main-bg-color);
     padding: 0px 10vw;
 }
 
-nav a {
-    display: inline-block;
-    padding: 20px 0px;
-    padding-right: 20px;
+.mobile-menu-icon {
+    padding: 20px 20px;
     text-decoration: none;
     color: var(--main-color);
+    display: none;
+}
+
+.mobile-menu-icon i {
+    float: right;
+}
+
+.mobile-menu-icon::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.menu-link {
+    display: inline-block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: background .5s;
+}
+
+.active {
+    background: var(--active-bg-color);
+}
+
+.menu-link:hover {
+    background: var(--hover-bg-color);
+}
+
+.mobile-link {
+    display: block !important;
 }
 
 /* ========= CONTENT ========= */
@@ -44,12 +108,15 @@ nav a {
     padding: 50px 10vw;
     background: var(--content-bg-color);
     color: var(--content-color);
+    height: 100%;
 }
 
 /* ========= FORMS ========= */
 
 .form-alert {
-    
+    display: block;
+    font-size: 24px;
+    text-align: center;
 }
 
 form {
@@ -85,6 +152,79 @@ input[type="submit"] {
     padding: 15px 0px;
 }
 
+/* ========= MAIN ========= */
+
+.main div {
+    margin: 40px 0px;
+}
+
+.main div h2 {
+    margin-bottom: 10px;
+}
+
+.main div img {
+    float: left;
+    margin: 0px 10px 10px 0px;
+}
+
+.main div::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ========= GALLERY ========= */
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-img-frame {
+    padding: 10px;
+}
+
+.gallery-img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+/* ========= MESSAGES ========= */
+
+.messages {
+    margin: 0px auto;
+}
+
+.messages td {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.messages td:last-child {
+    text-align: left;
+}
+
+/* ========= STAFF ========= */
+
+.staff {
+    margin: 40px 0px;
+}
+
+.staff-title {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.staff-img {
+    display: block;
+    margin: 0px auto;
+}
+
 /* ========= FOOTER ========= */
 
 footer {
@@ -93,4 +233,46 @@ footer {
     padding: 30px 10vw;
     text-align: center;
     color: var(--main-color);
+}
+
+/* ========= MEDIA QUERIES ========= */
+
+@media screen and (max-width: 600px) {
+    .logo-bar {
+        display: none;
+    }
+
+    .content {
+        overflow-x: auto;
+    }
+
+    .main div p {
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .menu {
+        padding: 0px;
+    }
+
+    .menu-link {
+        text-align: center;
+        display: none;
+
+    }
+    
+    .video {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .menu-link {
+        padding: 20px 10px;
+    }
 }
