@@ -1,0 +1,96 @@
+:root {
+    /* MAIN COLORS */
+
+    --main-color: #ffffff;
+    --main-bg-color: #2d2e2e;
+
+    /* CONTENT COLORS */
+
+    --content-bg-color: #ededed;
+    --content-color: #141414;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/* ========= MENU ========= */
+
+header nav {
+    width: 100%;
+    overflow: hidden;
+    background: var(--main-bg-color);
+    padding: 0px 10vw;
+}
+
+nav a {
+    display: inline-block;
+    padding: 20px 0px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+/* ========= CONTENT ========= */
+
+.content {
+    padding: 50px 10vw;
+    background: var(--content-bg-color);
+    color: var(--content-color);
+}
+
+/* ========= FORMS ========= */
+
+.form-alert {
+    
+}
+
+form {
+    width: 50vw;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    margin: 10px 0px;
+}
+
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 125px;
+    min-height: 125px;
+}
+
+input[type="submit"] {
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0px;
+    background: var(--main-bg-color);
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 15px 0px;
+}
+
+/* ========= FOOTER ========= */
+
+footer {
+    width: 100%;
+    background: var(--main-bg-color);
+    padding: 30px 10vw;
+    text-align: center;
+    color: var(--main-color);
+}
