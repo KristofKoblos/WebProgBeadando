@@ -24,6 +24,7 @@
 
 html, body {
     overflow-x: hidden;
+    background: var(--content-bg-color);
 }
 
 /* ========= MENU ========= */
@@ -233,6 +234,15 @@ footer {
     padding: 30px 10vw;
     text-align: center;
     color: var(--main-color);
+}
+
+/* ========= ERROR PAGES ========= */
+
+#not-found {
+    width: 50%;
+    height: 100%;
+    display: block;
+    margin: 0px auto;
 }
 
 /* ========= MEDIA QUERIES ========= */

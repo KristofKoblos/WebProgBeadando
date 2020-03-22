@@ -52,5 +52,6 @@
         <script src="https://kit.fontawesome.com/cd69c7f823.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script src="./assets/js/menu.js"></script>
+        <script src="./assets/js/form-validation.js"></script>
     </body>
 </html>

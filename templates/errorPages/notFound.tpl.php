@@ -1,1 +1,1 @@
-<h1>Az oldal nem található!</h1>
+<img id="not-found" src="./assets/imgs/not-found.gif" alt="404: Doggos not found">
