@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
     $uzenet = array();
     // Űrlap ellenőrzés:
@@ -54,7 +52,6 @@ if(isset($_SESSION['login']))
     }
     closedir($olvaso);
 ?>
->>>>>>> 93681e4d4944a3ce9a514ee5b8a703a053f8dc46
 <section class="gallery">
 <?php
     arsort($kepek);
@@ -70,37 +67,3 @@ if(isset($_SESSION['login']))
     }
     ?>
 </section>
-
-<!--
-    <div class="gallery-img-frame">
-        <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
-    </div>
-    <div class="gallery-img-frame">
-        <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
-    </div>
-    <div class="gallery-img-frame">
-        <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
-    </div>
-    <div class="gallery-img-frame">
-        <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
-    </div>
-    <div class="gallery-img-frame">
-        <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
-    </div>
-    <div class="gallery-img-frame">
-        <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
-    </div>
-    <div class="gallery-img-frame">
-        <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
-    </div>
-    <div class="gallery-img-frame">
-        <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
-    </div>
-    <div class="gallery-img-frame">
-        <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
-    </div>
-    <div class="gallery-img-frame">
-        <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
-    </div>
-</section>
--->
