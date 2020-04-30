@@ -1,11 +1,5 @@
 <?php
-//include('config.inc.php');
-    $uzenet = array();   
-
-    if(isset($_SESSION))
-    {
-        document.getElementById("feltoltesform").style.visibility = "visible";
-    }
+    $uzenet = array();
     // Űrlap ellenőrzés:
     if (isset($_POST['feltoltes'])) {
         //print_r($_FILES);
@@ -30,14 +24,51 @@
     }
 ?>
 
-<form name="feltoltesform" method="post" enctype="multipart/form-data" visibility="hidden">
+<?php
+//Csak akkor látszik a feltöltés, ha be van jelentkezve felhasználó
+if(isset($_SESSION['login']))
+{
+    echo '<form name="feltoltesform" method="post" enctype="multipart/form-data">
     <label>Kép feltöltése:
         <input type="file" name="kepfajl" required>
     </label>      
     <input type="submit" name="feltoltes" value="Feltöltés">
-</form>
-    
+    </form>';
+}
+
+?>
+
+
+<?php
+    $kepek = array();
+    $olvaso = opendir($kepmappa);
+    while (($fajl = readdir($olvaso)) !== false) {
+        if (is_file($kepmappa.$fajl)) {
+            $vege = strtolower(substr($fajl, strlen($fajl)-4));
+            if (in_array($vege, $tipusok)) {
+                $kepek[$fajl] = filemtime($kepmappa.$fajl);
+            }
+        }
+    }
+    closedir($olvaso);
+?>
 <section class="gallery">
+<?php
+    arsort($kepek);
+    foreach($kepek as $fajl => $datum)
+    {
+    ?>
+        <div class="gallery-img-frame">
+            <a href="<?php echo $kepmappa.$fajl ?>">
+                <img class="gallery-img" src="<?php echo $kepmappa.$fajl ?>">
+            </a>
+        </div>
+    <?php
+    }
+    ?>
+</section>
+
+<!--
     <div class="gallery-img-frame">
         <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
     </div>
@@ -69,3 +100,4 @@
         <img class="gallery-img" src="https://place-hold.it/300x300.jpg" alt="Kép">
     </div>
 </section>
+-->
