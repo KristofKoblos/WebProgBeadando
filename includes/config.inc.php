@@ -22,3 +22,9 @@
     $footer = array(
         'text' => 'Menhely &copy; ' . date('Y')
     );
+
+    $kepmappa = './assets/imgs/gallery/';
+    $tipusok = array ('.jpg', '.png');
+    $mediatipusok = array('image/jpeg', 'image/png');
+    //$maxmeret = 500*1024;
+?>
