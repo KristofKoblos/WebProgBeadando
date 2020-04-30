@@ -2,6 +2,10 @@
 //include('config.inc.php');
     $uzenet = array();   
 
+    if(isset($_SESSION))
+    {
+        document.getElementById("feltoltesform").style.visibility = "visible";
+    }
     // Űrlap ellenőrzés:
     if (isset($_POST['feltoltes'])) {
         //print_r($_FILES);
@@ -26,7 +30,7 @@
     }
 ?>
 
-<form method="post" enctype="multipart/form-data">
+<form name="feltoltesform" method="post" enctype="multipart/form-data" visibility="hidden">
     <label>Kép feltöltése:
         <input type="file" name="kepfajl" required>
     </label>      
