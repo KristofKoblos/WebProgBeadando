@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,15 +26,31 @@
                         if($currentPage == $page) {
                             $result .= '<a href="' . $url . '" class="active menu-link">' . $page['title'] . '</a>';
                         } else {
-                            $result .= '<a href="' . $url . '" class="menu-link">' . $page['title'] . '</a>';
+                            if(isset($_SESSION['login']) && ($page['title'] == 'Belépés' || $page['title'] == 'Regisztráció')){}
+                            else{
+                                if(!isset($_SESSION['login']) && $page['title'] == 'Kilépés'){}
+                                else{
+                                    $result .= '<a href="' . $url . '" class="menu-link">' . $page['title'] . '</a>';
+                                }
+                            }
                         }
                     }
-                    
+                    //echo "<script type='text/javascript'>alert('$result');</script>";
                     echo $result;
 
                 ?>
                 <a href="http://menhely.eu" class="menu-link" target="_blank">Menhely.eu</a>
+                 <?php
+                    if(isset($_SESSION['login']) && isset($_SESSION['veznev']) && isset($_SESSION['kernev']))
+                    {
+                        $bejelentkezve = "<p style='text-align:right; color:white'>Bejelentkezett: ".$_SESSION['veznev']." ".$_SESSION['kernev']." (".$_SESSION['login'].")</p>";
+                        echo $bejelentkezve;
+                    }
+                ?>
             </nav>
+
+           
+
         </header>
         <div class="content">
             <?php 

@@ -8,10 +8,11 @@
         '/' => array('file' => 'main', 'title' => 'Főoldal'),
         'kapcsolat' => array('file' => 'contact', 'title' => 'Kapcsolat'),
         'kepek' => array('file' => 'gallery', 'title' => 'Képek'),
-        'belepes' => array('file' => 'login', 'title' => 'Belépés'),
         'uzenetek' => array('file' => 'messages', 'title' => 'Üzenetek'),
-        'regisztracio' => array('file' => 'registration', 'title' => 'Regisztráció'),
-        'munkatarsak' => array('file' => 'staff', 'title' => 'Munkatársak')
+        'munkatarsak' => array('file' => 'staff', 'title' => 'Munkatársak'),
+        'belepes' => array('file' => 'login', 'title' => 'Belépés'),
+        'kilepes' => array('file' => 'logout', 'title' => 'Kilépés'),
+        'regisztracio' => array('file' => 'registration', 'title' => 'Regisztráció')
     );
 
     $errorPages = array(
@@ -21,3 +22,7 @@
     $footer = array(
         'text' => 'Menhely &copy; ' . date('Y')
     );
+
+    $kepmappa = './assets/imgs/gallery/';
+    $tipusok = array ('.jpg', '.png');
+    $mediatipusok = array('image/jpeg', 'image/png');
