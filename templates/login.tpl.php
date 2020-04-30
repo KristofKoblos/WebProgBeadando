@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
     if(isset($_POST['name']) && isset($_POST['psw'])) {
         try {
@@ -31,6 +32,8 @@
 ?>
 
 <div id="logindiv">
+=======
+>>>>>>> e29c75f761ce6badbd79d3f636f2930be7e82ba6
 <form method="post">
     <label for="name">Név:</label>
     <input type="text" name="name" placeholder="Név" required>
